@@ -5,3 +5,7 @@
 :root {
   @apply h-full bg-[linear-gradient(to_top,#051937,#051637,#061436,#091035,#0c0c34)];
 }
+
+section {
+  @apply font-sans
+}

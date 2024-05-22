@@ -8,7 +8,7 @@ import {
 const Header = () => {
   return (
     <header className="w-full flex justify-between px-16 py-4 mx-auto ">
-      <button className="px-3 py-2 text-md font-bold text-white uppercase bg-[#c44900] rounded">
+      <button className="h-12 px-3 py-2 text-md font-bold text-white uppercase bg-[#c44900] rounded">
         <a href="" className="flex flex-row items-center">
           <IconMovie size={27} />
           MovieApi
