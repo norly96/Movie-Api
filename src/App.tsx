@@ -4,6 +4,7 @@ import Search from "./components/Search";
 import MovieList from "./components/MovieList";
 import { clientAxios } from "./api/axios";
 import { MovieAPI } from "./api/axios";
+import MovieCard from "./components/MovieCard";
 
 function App() {
   const [movies, setmovies] = useState<MovieAPI[]>([]);
