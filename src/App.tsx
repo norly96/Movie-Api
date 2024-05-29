@@ -6,21 +6,48 @@ import { clientAxios } from "./api/axios";
 import { MovieAPI } from "./api/axios";
 import MovieCard from "./components/MovieCard";
 
+const skeletonMovies: MovieAPI[] = [
+  {
+    id: 1,
+    title: "1",
+    overview: "324",
+    poster_path: "324",
+  },
+  {
+    id: 2,
+    title: "1",
+    overview: "324",
+    poster_path: "324",
+  },
+  {
+    id: 3,
+    title: "1",
+    overview: "324",
+    poster_path: "324",
+  },
+  {
+    id: 4,
+    title: "1",
+    overview: "324",
+    poster_path: "324",
+  },
+];
+
 function App() {
   const [movies, setmovies] = useState<MovieAPI[]>([]);
-  const [loading, setloading] = useState(false);
+  const [loading, setLoading] = useState(true);
 
   const fetchMovies = async () => {
-    setloading(true);
+    setLoading(true);
     try {
       const response = await clientAxios.get("/discover/movie");
-      setloading(false);
+      setLoading(false);
       setmovies(response.data.results);
       console.log(response.data.results);
     } catch (error) {
       console.error("Error fetching data: ", error);
     }
-    setloading(false);
+    setLoading(false);
   };
 
   useEffect(() => {
@@ -30,8 +57,9 @@ function App() {
   return (
     <>
       <Header />
-      <Search />
-      {loading ? "Esta cargando" : <MovieList movies={movies} />}
+      <Search setmovies={setmovies} />
+
+      <MovieList movies={movies} loading={loading} />
     </>
   );
 }
