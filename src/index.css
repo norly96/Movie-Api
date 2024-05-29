@@ -3,7 +3,11 @@
 @tailwind utilities;
 
 :root {
-  @apply h-full bg-[linear-gradient(to_top,#051937,#051637,#061436,#091035,#0c0c34)];
+  --custom-background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);
+  @apply h-full bg-no-repeat;
+  background: var(--custom-background);
+  background-attachment: fixed;
+  background-size: cover; 
 }
 
 section {
