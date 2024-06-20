@@ -3,7 +3,6 @@ import Header from "./components/Header";
 import Search from "./components/Search";
 import MovieList from "./components/MovieList";
 import { clientAxios, MovieAPI } from "./api/axios";
-import MovieCard from "./components/MovieCard";
 
 const IMAGE_URL = import.meta.env.VITE_TMDB_IMAGE_URL;
 

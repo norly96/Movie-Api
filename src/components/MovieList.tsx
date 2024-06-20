@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { MovieAPI } from "../api/axios";
 import MovieCard from "./MovieCard";
 
