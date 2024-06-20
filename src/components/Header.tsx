@@ -17,8 +17,8 @@ const Header = () => {
       <nav className="flex flex-wrap items-center gap-2 justify-end pl-6 ml-6 border-l text-white border-gray-200 ">
         <a href="https://www.norly96.com">
           <img
-            src="/src/assets/blanco.png"
-            alt=""
+            src="/assets/blanco.png"
+            alt="icon of n96"
             className="w-6 transition-transform duration-500 hover:scale-125 "
           />
         </a>
