@@ -15,22 +15,22 @@ const Header = () => {
       </button>
 
       <nav className="flex flex-wrap items-center gap-2 justify-end pl-6 ml-6 border-l text-white border-gray-200 ">
-        <a href="">
+        <a href="www.norly96.com">
           <img
-            src="/public/blanco.png"
+            src="/src/assets/blanco.png"
             alt=""
             className="w-6 transition-transform duration-500 hover:scale-125 "
           />
         </a>
         <a
-          href="#_"
+          href="https://github.com/norly96"
           className="transition-transform duration-500 hover:scale-125 "
         >
           <IconBrandGithub size={30} />
         </a>
 
         <a
-          href="#_"
+          href="https://www.linkedin.com/in/norly96/"
           className="transition-transform duration-500 hover:scale-125 "
         >
           <IconBrandLinkedin size={30} />
