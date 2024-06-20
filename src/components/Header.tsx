@@ -15,7 +15,7 @@ const Header = () => {
       </button>
 
       <nav className="flex flex-wrap items-center gap-2 justify-end pl-6 ml-6 border-l text-white border-gray-200 ">
-        <a href="www.norly96.com">
+        <a href="https://www.norly96.com">
           <img
             src="/src/assets/blanco.png"
             alt=""
