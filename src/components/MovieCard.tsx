@@ -1,14 +1,27 @@
+import { MovieAPI } from "../api/axios";
+
 interface MovieProps {
   title: string;
   overview: string;
   poster_path: string;
+  movie: MovieAPI;
+  onMovieClick: (movie: MovieAPI) => void;
 }
 
 const IMAGE_URL = import.meta.env.VITE_TMDB_IMAGE_URL;
 
-const MovieCard = ({ title, overview, poster_path }: MovieProps) => {
+const MovieCard = ({
+  title,
+  overview,
+  poster_path,
+  movie,
+  onMovieClick,
+}: MovieProps) => {
   return (
-    <article className="grayscale hover:-translate-y-1 transition-transform duration-300 hover:grayscale-0 flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-96 mx-auto">
+    <article
+      onClick={() => onMovieClick(movie)}
+      className="grayscale cursor-pointer hover:-translate-y-1 transition-transform duration-300 hover:grayscale-0 flex flex-col justify-end overflow-hidden rounded-2xl px-8 pb-8 pt-40 max-w-96 mx-auto"
+    >
       <img
         src={`${IMAGE_URL}${poster_path}`}
         alt={`Poster of ${title}`}

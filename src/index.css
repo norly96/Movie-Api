@@ -14,6 +14,10 @@ section {
   @apply font-sans
 }
 
+.modal {
+  background: var(--custom-background);;
+}
+
   .loader {
     width: 48px;
     height: 48px;
